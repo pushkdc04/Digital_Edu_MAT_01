@@ -73,14 +73,44 @@ class _MyloginState extends State<Mylogin> {
                             backgroundColor: Colors.blueAccent,
                             child: IconButton(
                               color: Colors.white,
+                              onPressed: () {},
                               icon: Icon(Icons.arrow_forward),
-                              onPressed: () {
-                                Navigator.pushNamed(context, 'homepage');
-                              },
                             ),
                           )
                         ],
                       ),
+                      SizedBox(
+                        height: 40,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          TextButton(
+                              onPressed: () {
+                                Navigator.pushNamed(context, 'register');
+                              },
+                              child: Text(
+                                "Create Account",
+                                style: TextStyle(
+                                  decoration: TextDecoration.underline,
+                                  fontSize: 18,
+                                  color: Color.fromARGB(255, 255, 255, 255),
+                                ),
+                              )),
+                          TextButton(
+                              onPressed: () {
+                                Navigator.pushNamed(context, 'forgotpass');
+                              },
+                              child: Text(
+                                "Forget Password",
+                                style: TextStyle(
+                                  decoration: TextDecoration.underline,
+                                  fontSize: 18,
+                                  color: Color.fromARGB(255, 236, 238, 243),
+                                ),
+                              ))
+                        ],
+                      )
                     ],
                   )),
             )

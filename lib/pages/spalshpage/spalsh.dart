@@ -1,10 +1,6 @@
-<<<<<<< Updated upstream
-=======
-import 'package:task02mat01/main.dart';
-import 'package:task02mat01/pages/loginpage/login.dart';
->>>>>>> Stashed changes
+import 'package:digital_edu_mat_01/main.dart';
+import 'package:digital_edu_mat_01/pages/loginpage/login.dart';
 import 'package:flutter/material.dart';
-import '../loginpage/login.dart';
 
 class spalsh extends StatefulWidget {
   const spalsh({Key? key}) : super(key: key);

@@ -1,4 +1,4 @@
-import 'package:task02mat01/pages/spalshpage/spalsh.dart';
+import 'package:digital_edu_mat_01/pages/spalshpage/spalsh.dart';
 import 'package:flutter/material.dart';
 
 void main() {

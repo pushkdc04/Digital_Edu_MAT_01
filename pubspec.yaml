@@ -1,4 +1,4 @@
-name: task02mat01
+name: digital_edu_mat_01
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -61,6 +61,7 @@ flutter:
   assets:
   - assets/login.jpg
   - assets/spalsh.jpg
+  #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(task02mat01 LANGUAGES CXX)
+project(digital_edu_mat_01 LANGUAGES CXX)
 
-set(BINARY_NAME "task02mat01")
+set(BINARY_NAME "digital_edu_mat_01")
 
 cmake_policy(SET CMP0063 NEW)
 

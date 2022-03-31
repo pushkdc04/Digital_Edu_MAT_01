@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.task02mat01">
+    package="com.example.digital_edu_mat_01">
    <application
-        android:label="task02mat01"
+        android:label="digital_edu_mat_01"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
