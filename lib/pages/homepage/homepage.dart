@@ -45,7 +45,7 @@ class _homepageState extends State<homepage>
         children: _kTabPages,
       ),
       bottomNavigationBar: Material(
-        color: Colors.blue,
+        color: Colors.orange,
         child: TabBar(
           tabs: _kTabs,
           controller: _tabController,
