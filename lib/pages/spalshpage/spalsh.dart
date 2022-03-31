@@ -1,3 +1,8 @@
+<<<<<<< Updated upstream
+=======
+import 'package:task02mat01/main.dart';
+import 'package:task02mat01/pages/loginpage/login.dart';
+>>>>>>> Stashed changes
 import 'package:flutter/material.dart';
 import '../loginpage/login.dart';
 
