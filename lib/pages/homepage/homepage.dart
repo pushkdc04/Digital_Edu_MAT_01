@@ -1,60 +1,54 @@
 import 'package:flutter/material.dart';
 
 class homepage extends StatefulWidget {
-  static String routeName = "/homepage";
+  const homepage({Key? key}) : super(key: key);
+
   @override
-  homepageState createState() => homepageState();
+  State<StatefulWidget> createState() => _homepageState();
 }
 
-class homepageState extends State<homepage> {
-  bool isDrawerOpen = false;
+class _homepageState extends State<homepage>
+    with SingleTickerProviderStateMixin {
+  late TabController _tabController;
+
+  static const _kTabPages = <Widget>[
+    Center(child: Icon(Icons.cloud, size: 64.0, color: Colors.teal)),
+    Center(child: Icon(Icons.alarm, size: 64.0, color: Colors.cyan)),
+    Center(child: Icon(Icons.forum, size: 64.0, color: Colors.blue)),
+  ];
+  static const _kTabs = <Tab>[
+    Tab(icon: Icon(Icons.cloud), text: 'cloud'),
+    Tab(icon: Icon(Icons.alarm), text: 'Alarm'),
+    Tab(icon: Icon(Icons.forum), text: 'Chats'),
+  ];
 
   @override
   void initState() {
     super.initState();
+    _tabController = TabController(
+      length: _kTabPages.length,
+      vsync: this,
+    );
+  }
+
+  @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("HomeScreen"),
+      body: TabBarView(
+        controller: _tabController,
+        children: _kTabPages,
       ),
-      body: const Center(
-        child: Text("Application Body"),
-      ),
-      drawer: Drawer(
-        // Add a ListView to the drawer. This ensures the user can scroll
-        // through the options in the drawer if there isn't enough vertical
-        // space to fit everything.
-        child: ListView(
-          // Important: Remove any padding from the ListView.
-          padding: EdgeInsets.zero,
-          children: [
-            const DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.white,
-              ),
-              child: Text(
-                'Drawer Header',
-                style: TextStyle(color: Colors.white, fontSize: 24),
-              ),
-            ),
-            ListTile(
-              title: const Text('Item 1'),
-              onTap: () {
-                // Update the state of the app.
-                // ...
-              },
-            ),
-            ListTile(
-              title: const Text('Item 2'),
-              onTap: () {
-                // Update the state of the app.
-                // ...
-              },
-            ),
-          ],
+      bottomNavigationBar: Material(
+        color: Colors.orange,
+        child: TabBar(
+          tabs: _kTabs,
+          controller: _tabController,
         ),
       ),
     );
