@@ -25,12 +25,12 @@ class _spalshState extends State<spalsh> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage('assets/spalsh.jpg'), fit: BoxFit.cover)),
-              child: Center(
-        child: CircularProgressIndicator(
-            valueColor: AlwaysStoppedAnimation<Color>(Colors.white)),
-    );
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage('assets/spalsh.jpg'), fit: BoxFit.cover)),
+        child: Center(
+          child: CircularProgressIndicator(
+              valueColor: AlwaysStoppedAnimation<Color>(Colors.white)),
+        ));
   }
 }
