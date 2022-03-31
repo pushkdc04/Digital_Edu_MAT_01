@@ -28,6 +28,9 @@ class _spalshState extends State<spalsh> {
       decoration: BoxDecoration(
           image: DecorationImage(
               image: AssetImage('assets/spalsh.jpg'), fit: BoxFit.cover)),
+              child: Center(
+        child: CircularProgressIndicator(
+            valueColor: AlwaysStoppedAnimation<Color>(Colors.white)),
     );
   }
 }
